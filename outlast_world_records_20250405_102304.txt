@@ -1,0 +1,40 @@
+Outlast Speedrun World Records
+Generated on: 2025-04-05 10:23:04
+Data source: https://www.speedrun.com/outlast
+------------------------------------------------------------
+
+Category: Any%
+Time: 00:03:35.639
+Runner: PyBrou
+Date: 2024-11-07
+
+Category: All Chapters
+Time: 00:03:56.610
+Runner: KabzdariK
+Date: 2024-11-15
+
+Category: Insane
+Time: 00:04:25.620
+Runner: KabzdariK
+Date: 2024-11-15
+
+Category: 100%
+Time: 00:11:11.200
+Runner: axes
+Date: 2024-10-30
+
+Category: No Major Glitches
+Time: 00:29:18.450
+Runner: JayV
+Date: 2023-04-27
+
+Category: Glitchless
+Time: 00:30:34.640
+Runner: KartalFC
+Date: 2024-12-02
+
+Category: Glitchless 100%
+Time: 00:32:37.730
+Runner: PyBrou
+Date: 2024-10-12
+
