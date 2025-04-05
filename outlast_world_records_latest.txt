@@ -1,4 +1,4 @@
 Outlast Speedrun World Records
-Generated on: 2025-04-05 17:42:41
+Generated on: 2025-04-05 17:46:18
 Data source: https://www.speedrun.com/outlast
-Category: Any%Time: 00:04:38.379Runner: SEAAGLE | Category: All ChaptersTime: 00:11:12.679Runner: PyBrou | Category: InsaneTime: 00:15:14.480Runner: PyBrou | Category: 100%Time: 00:25:20.529Runner: falex | Category: No OOBTime: 00:35:18.440Runner: PyBrou | Category: GlitchlessTime: 00:50:02.329Runner: PyBrou | 
+Any% : 00:04:38.379 by: SEAAGLE  | All Chapters : 00:11:12.679 by: PyBrou  | Insane : 00:15:14.480 by: PyBrou  | 100% : 00:25:20.529 by: falex  | No OOB : 00:35:18.440 by: PyBrou  | Glitchless : 00:50:02.329 by: PyBrou  | 
