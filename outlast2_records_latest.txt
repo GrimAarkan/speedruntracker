@@ -1,40 +1,40 @@
 Outlast 2 Speedrun World Records
-Generated on: 2025-04-05 23:14:21
+Generated on: 2025-04-05 23:26:13
 Data source: https://www.speedrun.com/outlast_2
 ------------------------------------------------------------
 
 Category: Cutscene Skip Mod
 Time: 00:29:05.000
-Runner: Unknown Runner
+Runner: SEAAGLE
 Date: September 28, 2024
 
 Category: No Checkpoint Killing
 Time: 00:48:44.000
-Runner: Unknown Runner
+Runner: anti
 Date: August 18, 2024
 
 Category: Any% No Stamina
 Time: 01:27:32.000
-Runner: Unknown Runner
+Runner: anti
 Date: August 26, 2024
 
 Category: Any%
 Time: 01:28:34.000
-Runner: Unknown Runner
+Runner: anti
 Date: August 13, 2024
 
 Category: Insane
 Time: 01:37:09.000
-Runner: Unknown Runner
+Runner: anti
 Date: September 20, 2024
 
 Category: Any% (60 FPS)
 Time: 01:38:44.000
-Runner: Unknown Runner
+Runner: sharkhat
 Date: September 10, 2024
 
 Category: Glitchless
 Time: 01:43:52.000
-Runner: Unknown Runner
+Runner: anti
 Date: September 09, 2024
 
