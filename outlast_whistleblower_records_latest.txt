@@ -1,35 +1,35 @@
 Outlast: Whistleblower Speedrun World Records
-Generated on: 2025-04-05 22:44:48
+Generated on: 2025-04-05 23:25:49
 Data source: https://www.speedrun.com/outlast_whistleblower
 ------------------------------------------------------------
 
 Category: Any%
 Time: 00:03:35.639
-Runner: Unknown Runner
+Runner: PyBrou
 Date: November 07, 2024
 
 Category: All Chapters
 Time: 00:03:56.610
-Runner: Unknown Runner
+Runner: KabzdariK
 Date: November 15, 2024
 
 Category: Insane
 Time: 00:04:25.620
-Runner: Unknown Runner
+Runner: KabzdariK
 Date: November 15, 2024
 
 Category: 100%
 Time: 00:11:11.200
-Runner: Unknown Runner
+Runner: axes
 Date: October 30, 2024
 
 Category: No OOB
 Time: 00:19:36.190
-Runner: Unknown Runner
+Runner: PyBrou
 Date: June 07, 2024
 
 Category: Glitchless
 Time: 00:31:04.920
-Runner: Unknown Runner
+Runner: KartalFC
 Date: December 01, 2024
 
