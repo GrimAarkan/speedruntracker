@@ -1,5 +1,5 @@
 Outlast Speedrun World Records
-Generated on: 2025-04-05 17:40:30
+Generated on: 2025-04-05 17:40:42
 Data source: https://www.speedrun.com/outlast
 Category: Any%
 Time: 00:04:38.379
