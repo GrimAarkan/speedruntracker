@@ -1,0 +1,660 @@
+{
+    "data": [
+        {
+            "id": "5dwy61ek",
+            "name": "Any%",
+            "weblink": "https://www.speedrun.com/outlast#Any?h=Any-Main_Game-PC",
+            "type": "per-game",
+            "rules": "",
+            "players": {
+                "type": "exactly",
+                "value": 1
+            },
+            "miscellaneous": false,
+            "links": [
+                {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/5dwy61ek"
+                },
+                {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76r43l18"
+                },
+                {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/5dwy61ek"
+                },
+                {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/5dwy61ek/records"
+                },
+                {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=5dwy61ek"
+                },
+                {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76r43l18/category/5dwy61ek"
+                }
+            ]
+        },
+        {
+            "id": "vdoor39d",
+            "name": "All Chapters",
+            "weblink": "https://www.speedrun.com/outlast#All_Chapters",
+            "type": "per-game",
+            "rules": "`Read the 'Game Rules' tab for rules that apply to every category to ensure your submission does not get rejected for missing requirements`\r\n\r\n---\r\n\r\n#### All Chapters\r\n\r\n- Complete the game.\r\n- Must reach one checkpoint in each chapter (A checkpoint is indicated by the \u201cSaving\u2026\u201d icon in the bottom corner).\r\n- Usage of any glitch is allowed.",
+            "players": {
+                "type": "exactly",
+                "value": 1
+            },
+            "miscellaneous": false,
+            "links": [
+                {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/vdoor39d"
+                },
+                {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76r43l18"
+                },
+                {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/vdoor39d/variables"
+                },
+                {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/vdoor39d/records"
+                },
+                {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=vdoor39d"
+                },
+                {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76r43l18/category/vdoor39d"
+                }
+            ]
+        },
+        {
+            "id": "wkpo8v82",
+            "name": "Glitchless",
+            "weblink": "https://www.speedrun.com/outlast#Glitchless",
+            "type": "per-game",
+            "rules": "",
+            "players": {
+                "type": "exactly",
+                "value": 1
+            },
+            "miscellaneous": false,
+            "links": [
+                {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/wkpo8v82"
+                },
+                {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76r43l18"
+                },
+                {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/wkpo8v82/variables"
+                },
+                {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/wkpo8v82/records"
+                },
+                {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=wkpo8v82"
+                },
+                {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76r43l18/category/wkpo8v82"
+                }
+            ]
+        },
+        {
+            "id": "mkezgrnk",
+            "name": "No OoB",
+            "weblink": "https://www.speedrun.com/outlast#No_OoB",
+            "type": "per-game",
+            "rules": "`Read the 'Game Rules' tab for rules that apply to every category to ensure your submission does not get rejected for missing requirements`\n\n---\n\n### No Out of Bounds Rules and Restrictions\r\r\n\n- You are not allowed to unload the level.\r\n- Miles full hitbox must stay in the bounding boxes of the level.\r\n- It is considered out of bounds if the screen goes black and unloads some objects temporarily.\r\n- The camera may enter the out of bounds space as it is a separate entity from the player.\r\n- Cases in which it is unclear if the runner has entered the out of bounds space is subject to moderator discretion. \r\n\n### \r",
+            "players": {
+                "type": "exactly",
+                "value": 1
+            },
+            "miscellaneous": false,
+            "links": [
+                {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/mkezgrnk"
+                },
+                {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76r43l18"
+                },
+                {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/mkezgrnk/variables"
+                },
+                {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/mkezgrnk/records"
+                },
+                {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=mkezgrnk"
+                },
+                {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76r43l18/category/mkezgrnk"
+                }
+            ]
+        },
+        {
+            "id": "wk67xvpd",
+            "name": "100%",
+            "weblink": "https://www.speedrun.com/outlast#100",
+            "type": "per-game",
+            "rules": "",
+            "players": {
+                "type": "exactly",
+                "value": 1
+            },
+            "miscellaneous": false,
+            "links": [
+                {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/wk67xvpd"
+                },
+                {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76r43l18"
+                },
+                {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/wk67xvpd/variables"
+                },
+                {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/wk67xvpd/records"
+                },
+                {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=wk67xvpd"
+                },
+                {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76r43l18/category/wk67xvpd"
+                }
+            ]
+        },
+        {
+            "id": "n2y5p71k",
+            "name": "Glitchless 100%",
+            "weblink": "https://www.speedrun.com/outlast#Glitchless_100",
+            "type": "per-game",
+            "rules": "",
+            "players": {
+                "type": "exactly",
+                "value": 1
+            },
+            "miscellaneous": true,
+            "links": [
+                {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/n2y5p71k"
+                },
+                {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76r43l18"
+                },
+                {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/n2y5p71k/variables"
+                },
+                {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/n2y5p71k/records"
+                },
+                {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=n2y5p71k"
+                },
+                {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76r43l18/category/n2y5p71k"
+                }
+            ]
+        },
+        {
+            "id": "824nv5gk",
+            "name": "No Major Glitches",
+            "weblink": "https://www.speedrun.com/outlast#No_Major_Glitches",
+            "type": "per-game",
+            "rules": "",
+            "players": {
+                "type": "exactly",
+                "value": 1
+            },
+            "miscellaneous": true,
+            "links": [
+                {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/824nv5gk"
+                },
+                {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76r43l18"
+                },
+                {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/824nv5gk/variables"
+                },
+                {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/824nv5gk/records"
+                },
+                {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=824nv5gk"
+                },
+                {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76r43l18/category/824nv5gk"
+                }
+            ]
+        },
+        {
+            "id": "wk60r9ok",
+            "name": "Any%",
+            "weblink": "https://www.speedrun.com/outlast",
+            "type": "per-level",
+            "rules": "`Read the 'Game Rules' tab for rules that apply to every category to ensure your submission does not get rejected for missing requirements`\n\n---\n\n### Any% (Individual Level) Rules and Restrictions\n\n- Complete the chapter\r\n- Usage of any glitch is allowed.\r\n\n---\n\n### Timing\n\n- Time starts on first input with the exception of Prison Block. For Prison Block, timing begins when the loading screen finishes.\r\n\n- Time ends when you reach any checkpoint in the next chapter, or, if you are doing Underground Lab / Exit. Time ends When Miles hand touches the floor / when Waylon's hand touches the car door.\r\n\n---\n\n### Individual Level Specific Rules\n\nThe Default sub category follows the same bhop rules as full game runs.\n\nAll bhops are allowed in the Bhop sub category, and you are allowed to cap your framerate to 61.81 FPS (bhops are significantly more consistent on 61.81).\n\nIL runs that attempt bhops must show controls in the main menu settings at the end of the run.\n\nConsole runners should submit to the Default sub category.",
+            "players": {
+                "type": "exactly",
+                "value": 1
+            },
+            "miscellaneous": false,
+            "links": [
+                {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/wk60r9ok"
+                },
+                {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76r43l18"
+                },
+                {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/wk60r9ok/variables"
+                },
+                {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/wk60r9ok/records"
+                },
+                {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=wk60r9ok"
+                }
+            ]
+        },
+        {
+            "id": "n2yerw7k",
+            "name": "Glitchless",
+            "weblink": "https://www.speedrun.com/outlast",
+            "type": "per-level",
+            "rules": "`Read the 'Game Rules' tab for rules that apply to every category to ensure your submission does not get rejected for missing requirements`\n\n---\n\n### Glitchless (Individual Level) Rules and Restrictions\n\n- Complete the chapter\r\n- Read glitchless full game rules for what is and is not allowed\r\n\n---\n\n### Timing\n\n- Time starts on first input with the exception of Prison Block. For Prison Block, timing begins when the loading screen finishes.\r\n\n- Time ends when you reach any checkpoint in the next chapter, or, if you are doing Underground Lab / Exit. Time ends When Miles hand touches the floor / when Waylon's hand touches the car door.\r\n\n---\n\n### Individual Level Specific Rules\n\nThe Default sub category follows the same bhop rules as full game runs.\n\nAll bhops are allowed in the Bhop sub category, and you are allowed to cap your framerate to 61.81 FPS (bhops are significantly more consistent on 61.81).\n\nIL runs that attempt bhops must show controls in the main menu settings at the end of the run.\n\nConsole runners should submit to the Default sub category.",
+            "players": {
+                "type": "exactly",
+                "value": 1
+            },
+            "miscellaneous": false,
+            "links": [
+                {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/n2yerw7k"
+                },
+                {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76r43l18"
+                },
+                {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/n2yerw7k/variables"
+                },
+                {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/n2yerw7k/records"
+                },
+                {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=n2yerw7k"
+                }
+            ]
+        },
+        {
+            "id": "7kjolx32",
+            "name": "No OoB",
+            "weblink": "https://www.speedrun.com/outlast",
+            "type": "per-level",
+            "rules": "`Read the 'Game Rules' tab for rules that apply to every category to ensure your submission does not get rejected for missing requirements`\n\n---\n\n### No Out of Bounds (Individual Level) Rules and Restrictions\n\n- Complete the chapter\r\n- You are not allowed to unload the level.\r\n- Miles/Waylon's full hitbox must stay in the bounding boxes of the level.\r\n- It is considered out of bounds if the screen goes black and unloads some objects temporarily.\r\n- The camera may enter the out of bounds space as it is a separate entity from the player.\r\n- Cases in which it is unclear if the runner has entered the out of bounds space is subject to moderator discretion.\r\n\n---\n\n### Timing\n\n- Time starts on first input with the exception of Prison Block. For Prison Block, timing begins when the loading screen finishes.\r\n\n- Time ends when you reach any checkpoint in the next chapter, or, if you are doing Underground Lab / Exit. Time ends When Miles hand touches the floor / when Waylon's hand touches the car door.\r\n\n---\n\n### Individual Level Specific Rules\n\nThe Default sub category follows the same bhop rules as full game runs.\n\nAll bhops are allowed in the Bhop sub category, and you are allowed to cap your framerate to 61.81 FPS (bhops are significantly more consistent on 61.81).\n\nIL runs that attempt bhops must show controls in the main menu settings at the end of the run.\n\nConsole runners should submit to the Default sub category.",
+            "players": {
+                "type": "exactly",
+                "value": 1
+            },
+            "miscellaneous": false,
+            "links": [
+                {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/7kjolx32"
+                },
+                {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76r43l18"
+                },
+                {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/7kjolx32/variables"
+                },
+                {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/7kjolx32/records"
+                },
+                {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=7kjolx32"
+                }
+            ]
+        },
+        {
+            "id": "xk9p5qvd",
+            "name": "100%",
+            "weblink": "https://www.speedrun.com/outlast",
+            "type": "per-level",
+            "rules": "`Read the 'Game Rules' tab for rules that apply to every category to ensure your submission does not get rejected for missing requirements`\n\n---\n\n### 100% (Individual Level) Rules and Restrictions\n\n- Complete the chapter\r\n- Usage of any glitch is allowed.\r\n- Must collect all documents and notes in the chapter (A Feast for Flies collectable is included in the Sewers level)\r\n\n---\n\n### Timing\n\n- Time starts on first input with the exception of Prison Block. For Prison Block, timing begins when the loading screen finishes.\r\n\n- Time ends when you reach any checkpoint in the next chapter, or, if you are doing Underground Lab / Exit. Time ends When Miles hand touches the floor / when Waylon's hand touches the car door.\r\n\n---\n\n### Individual Level Specific Rules\n\nThe Default sub category follows the same bhop rules as full game runs.\n\nAll bhops are allowed in the Bhop sub category, and you are allowed to cap your framerate to 61.81 FPS (bhops are significantly more consistent on 61.81).\n\nIL runs that attempt bhops must show controls in the main menu settings at the end of the run.\n\nConsole runners should submit to the Default sub category.",
+            "players": {
+                "type": "exactly",
+                "value": 1
+            },
+            "miscellaneous": false,
+            "links": [
+                {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/xk9p5qvd"
+                },
+                {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76r43l18"
+                },
+                {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/xk9p5qvd/variables"
+                },
+                {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/xk9p5qvd/records"
+                },
+                {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=xk9p5qvd"
+                }
+            ]
+        },
+        {
+            "id": "z2760lod",
+            "name": "No OoB, No Camera",
+            "weblink": "https://www.speedrun.com/outlast#No_OoB_No_Camera",
+            "type": "per-game",
+            "rules": "`Read the 'Game Rules' tab for rules that apply to every category to ensure your submission does not get rejected for missing requirements`\r\n\r\n---\r\n\r\n#### No Out of Bounds, No Camera \r\n\r\n- Complete the game.\r\n- For the entirety of the run, you are not allowed to bring up your camera. (During scenes where the camera comes up manually you must instantly put it down).\r\n- You are not allowed to unload the level. \r\n- It is considered out of bounds if the screen goes black and unloads some objects temporarily.\r\n- Your hitbox must stay in the bounding boxes of the level\r\n\r\n---\r\n\r\n##### Additional Information\r\n\r\n- Must reach one checkpoint for each chapter (A checkpoint is indicated by the \u201cSaving\u2026\u201d icon in the bottom corner).",
+            "players": {
+                "type": "exactly",
+                "value": 1
+            },
+            "miscellaneous": true,
+            "links": [
+                {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/z2760lod"
+                },
+                {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76r43l18"
+                },
+                {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/z2760lod/variables"
+                },
+                {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/z2760lod/records"
+                },
+                {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=z2760lod"
+                },
+                {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76r43l18/category/z2760lod"
+                }
+            ]
+        },
+        {
+            "id": "xd1wnq42",
+            "name": "Whistleblower No OoB (Jeremy Skip)",
+            "weblink": "https://www.speedrun.com/outlast#Whistleblower_No_OoB_Jeremy_Skip",
+            "type": "per-game",
+            "rules": "`Read the 'Game Rules' tab for rules that apply to every category to ensure your submission does not get rejected for missing requirements`\r\n\r\n----\r\n\r\n#### No Out of Bounds Rules and Restrictions\r\nComplete the game.\r\n\r\n- You are not allowed to unload the level.\r\n- It is considered out of bounds if the screen goes black and unloads some objects temporarily.\r\n- Your hitbox must stay in the bounding boxes of the level\r\n\r\n#### Additional Information:\r\nMust reach one checkpoint for each chapter (A checkpoint is indicated by the \u201cSaving\u2026\u201d icon in the bottom corner).",
+            "players": {
+                "type": "exactly",
+                "value": 1
+            },
+            "miscellaneous": true,
+            "links": [
+                {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/xd1wnq42"
+                },
+                {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76r43l18"
+                },
+                {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/xd1wnq42/variables"
+                },
+                {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/xd1wnq42/records"
+                },
+                {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=xd1wnq42"
+                },
+                {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76r43l18/category/xd1wnq42"
+                }
+            ]
+        },
+        {
+            "id": "zdn45xxk",
+            "name": "Insane",
+            "weblink": "https://www.speedrun.com/outlast#Insane",
+            "type": "per-game",
+            "rules": "`Read the 'Game Rules' tab for rules that apply to every category to ensure your submission does not get rejected for missing requirements`",
+            "players": {
+                "type": "exactly",
+                "value": 1
+            },
+            "miscellaneous": false,
+            "links": [
+                {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/zdn45xxk"
+                },
+                {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76r43l18"
+                },
+                {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/zdn45xxk/variables"
+                },
+                {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/zdn45xxk/records"
+                },
+                {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=zdn45xxk"
+                },
+                {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76r43l18/category/zdn45xxk"
+                }
+            ]
+        },
+        {
+            "id": "824e6ewk",
+            "name": "Glitchless 100%",
+            "weblink": "https://www.speedrun.com/outlast",
+            "type": "per-level",
+            "rules": "`Read the 'Game Rules' tab for rules that apply to every category to ensure your submission does not get rejected for missing requirements`\n\n---\n\n### Glitchless 100% (Individual Level) Rules and Restrictions\n\n- Complete the chapter\r\n- Must collect all collectables (A Feast for Flies recording is in the Sewers level)\r\n- Read Glitchless full game rules for what is and is not allowed\r\n\n---\n\n### Timing\n\n- Time starts on first input with the exception of Prison Block. For Prison Block, timing begins when the loading screen finishes.\r\n\n- Time ends when you reach any checkpoint in the next chapter, or, if you are doing Underground Lab / Exit. Time ends When Miles hand touches the floor / when Waylon's hand touches the car door.\r\n\n---\n\n### Individual Level Specific Rules\n\nThe Default sub category follows the same bhop rules as full game runs.\n\nAll bhops are allowed in the Bhop sub category, and you are allowed to cap your framerate to 61.81 FPS (bhops are significantly more consistent on 61.81).\n\nIL runs that attempt bhops must show controls in the main menu settings at the end of the run.\n\nConsole runners should submit to the Default sub category.",
+            "players": {
+                "type": "exactly",
+                "value": 1
+            },
+            "miscellaneous": false,
+            "links": [
+                {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/824e6ewk"
+                },
+                {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76r43l18"
+                },
+                {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/824e6ewk/variables"
+                },
+                {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/824e6ewk/records"
+                },
+                {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=824e6ewk"
+                }
+            ]
+        },
+        {
+            "id": "9kv39qe2",
+            "name": "Insane",
+            "weblink": "https://www.speedrun.com/outlast",
+            "type": "per-level",
+            "rules": "`Read the 'Game Rules' tab for rules that apply to every category to ensure your submission does not get rejected for missing requirements`\n\n---\n\n### Insane (Individual Level) Rules and Restrictions\n\n- Complete the chapter\r\n- Usage of any glitch is allowed.\r\n- You can play on nightmare difficulty for convenience  \r\n- You have to complete the chapter like you would on an Insane run, so for example, no hitting the Prison Any% checkpoint\r\n\n---\n\n### Timing\n\n- Time starts on first input with the exception of Prison Block. For Prison Block, timing begins when the loading screen finishes.\r\n\n- Time ends when you reach any checkpoint in the next chapter, or, if you are doing Underground Lab / Exit. Time ends When Miles hand touches the floor / when Waylon's hand touches the car door.\r\n\n---\n\n### Individual Level Specific Rules\n\nThe Default sub category follows the same bhop rules as full game runs.\n\nAll bhops are allowed in the Bhop sub category, and you are allowed to cap your framerate to 61.81 FPS (bhops are significantly more consistent on 61.81).\n\nIL runs that attempt bhops must show controls in the main menu settings at the end of the run.\n\nConsole runners should submit to the Default sub category.",
+            "players": {
+                "type": "exactly",
+                "value": 1
+            },
+            "miscellaneous": false,
+            "links": [
+                {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/9kv39qe2"
+                },
+                {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76r43l18"
+                },
+                {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/9kv39qe2/variables"
+                },
+                {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/9kv39qe2/records"
+                },
+                {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=9kv39qe2"
+                }
+            ]
+        },
+        {
+            "id": "02qzpmz2",
+            "name": "Death%",
+            "weblink": "https://www.speedrun.com/outlast",
+            "type": "per-level",
+            "rules": "`Read the 'Game Rules' tab for rules that apply to every category to ensure your submission does not get rejected for missing requirements`\n\n---\n\n### Death% Rules and Restrictions\n\n- Die as quickly as possible.\n- Usage of any glitch is allowed.\r\n\n---\n\n### Timing\n\n- Time starts on first input with the exception of Prison Block. For Prison Block, timing begins when the loading screen finishes.\r\n\n- Time ends when you die. ( 1st blurry frame. )\n\n### Individual Level Specific Rules\n\nThe Default sub category follows the same bhop rules as full game runs.\n\nAll bhops are allowed in the Bhop sub category, and you are allowed to cap your framerate to 61.81 FPS (bhops are significantly more consistent on 61.81).\n\nIL runs that attempt bhops must show controls in the main menu settings at the end of the run.\n\nConsole runners should submit to the Default sub category.",
+            "players": {
+                "type": "exactly",
+                "value": 1
+            },
+            "miscellaneous": false,
+            "links": [
+                {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/02qzpmz2"
+                },
+                {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76r43l18"
+                },
+                {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/02qzpmz2/variables"
+                },
+                {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/02qzpmz2/records"
+                },
+                {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=02qzpmz2"
+                }
+            ]
+        },
+        {
+            "id": "9d805xl2",
+            "name": "Demo",
+            "weblink": "https://www.speedrun.com/outlast#demo",
+            "type": "per-game",
+            "rules": "",
+            "players": {
+                "type": "up-to",
+                "value": 1
+            },
+            "miscellaneous": true,
+            "links": [
+                {
+                    "rel": "self",
+                    "uri": "https://www.speedrun.com/api/v1/categories/9d805xl2"
+                },
+                {
+                    "rel": "game",
+                    "uri": "https://www.speedrun.com/api/v1/games/76r43l18"
+                },
+                {
+                    "rel": "variables",
+                    "uri": "https://www.speedrun.com/api/v1/categories/9d805xl2/variables"
+                },
+                {
+                    "rel": "records",
+                    "uri": "https://www.speedrun.com/api/v1/categories/9d805xl2/records"
+                },
+                {
+                    "rel": "runs",
+                    "uri": "https://www.speedrun.com/api/v1/runs?category=9d805xl2"
+                },
+                {
+                    "rel": "leaderboard",
+                    "uri": "https://www.speedrun.com/api/v1/leaderboards/76r43l18/category/9d805xl2"
+                }
+            ]
+        }
+    ]
+}

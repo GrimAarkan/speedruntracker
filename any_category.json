@@ -1,0 +1,78 @@
+{
+    "data": {
+        "weblink": "https://www.speedrun.com/outlast#Any",
+        "game": "76r43l18",
+        "category": "w20wryod",
+        "level": null,
+        "platform": null,
+        "region": null,
+        "emulators": null,
+        "video-only": false,
+        "timing": "realtime_noloads",
+        "values": {},
+        "runs": [
+            {
+                "place": 1,
+                "run": {
+                    "id": "m7o4g69y",
+                    "weblink": "https://www.speedrun.com/outlast/run/m7o4g69y",
+                    "game": "76r43l18",
+                    "level": null,
+                    "category": "w20wryod",
+                    "videos": {
+                        "links": [
+                            {
+                                "uri": "https://www.youtube.com/watch?v=y10LPhf0_9s"
+                            }
+                        ]
+                    },
+                    "comment": "Really good run except savequit split",
+                    "status": {
+                        "status": "verified",
+                        "examiner": "8v2olm5j",
+                        "verify-date": "2024-11-07T21:39:31Z"
+                    },
+                    "players": [
+                        {
+                            "rel": "user",
+                            "id": "8v2olm5j",
+                            "uri": "https://www.speedrun.com/api/v1/users/8v2olm5j"
+                        }
+                    ],
+                    "date": "2024-11-07",
+                    "submitted": "2024-11-07T21:39:31Z",
+                    "times": {
+                        "primary": "PT3M35.640S",
+                        "primary_t": 215.64,
+                        "realtime": "PT3M35.640S",
+                        "realtime_t": 215.64,
+                        "realtime_noloads": null,
+                        "realtime_noloads_t": 0,
+                        "ingame": null,
+                        "ingame_t": 0
+                    },
+                    "system": {
+                        "platform": "8gej2n93",
+                        "emulated": false,
+                        "region": null
+                    },
+                    "splits": null,
+                    "values": {
+                        "onv639m8": "21gjkr61",
+                        "6njvgyen": "jqz6ok21"
+                    }
+                }
+            }
+        ],
+        "links": [
+            {
+                "rel": "game",
+                "uri": "https://www.speedrun.com/api/v1/games/76r43l18"
+            },
+            {
+                "rel": "category",
+                "uri": "https://www.speedrun.com/api/v1/categories/w20wryod"
+            }
+        ]
+    }
+}
