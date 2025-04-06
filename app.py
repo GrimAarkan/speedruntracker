@@ -58,7 +58,7 @@ def save_records_to_txt():
         # Write data to file
         with open(file_path, 'w') as f:
             f.write(f"As of: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} ")
-            f.write(f"from: https://www.speedrun.com/outlast ")
+            f.write(f"from: https://www.speedrun.com/outlast | ")
 
             for record in valid_categories.values():
                 f.write(f"{record['category']} ")
@@ -761,7 +761,7 @@ def save_whistleblower_records_to_txt():
         # Write data to file
         with open(file_path, 'w') as f:
             f.write(f"As of: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} ")
-            f.write(f"from: https://www.speedrun.com/outlast ")
+            f.write(f"from: https://www.speedrun.com/outlast | ")
 
             for record in valid_categories.values():
                 f.write(f"{record['category']} ")
@@ -831,7 +831,7 @@ def save_outlast2_records_to_txt():
         # Write data to file
         with open(file_path, 'w') as f:
             f.write(f"As of: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} ")
-            f.write(f"from: https://www.speedrun.com/outlast2 ")
+            f.write(f"from: https://www.speedrun.com/outlast2 | ")
 
             for record in valid_categories.values():
                 f.write(f"{record['category']} ")
