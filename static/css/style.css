@@ -1,1 +1,105 @@
+/* Additional custom styles to enhance the Bootstrap theme */
 
+body {
+    min-height: 100vh;
+    background-color: #212529;
+}
+
+.card {
+    border-width: 2px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+#record-time {
+    text-shadow: 0 0 10px rgba(220, 53, 69, 0.5);
+    letter-spacing: 2px;
+}
+
+#refresh-btn {
+    transition: all 0.3s ease;
+}
+
+#refresh-btn:hover {
+    background-color: var(--bs-danger);
+    color: white;
+    transform: scale(1.05);
+}
+
+.fa-trophy {
+    color: gold;
+}
+
+/* Category selector */
+.category-selector {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.category-selector .btn {
+    margin: 0.25rem;
+    border-radius: 1.5rem;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+}
+
+/* Category table */
+.category-row {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.category-row:hover {
+    background-color: rgba(220, 53, 69, 0.1);
+}
+
+.text-monospace {
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.badge {
+    font-size: 0.65rem;
+    padding: 0.35em 0.65em;
+    vertical-align: middle;
+}
+
+/* Loading animation */
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* Custom animation for data refresh */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .category-selector {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .category-selector label {
+        margin: 0.25rem 0;
+    }
+    
+    #record-time {
+        font-size: 2.5rem;
+    }
+}
