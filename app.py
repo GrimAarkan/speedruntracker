@@ -121,21 +121,47 @@ def auto_export_records():
     """Automatically export records at regular intervals."""
     while True:
         try:
-            # Export to local files
+            # Export main Outlast records to local files
             txt_path = save_records_to_txt()
             save_records_to_json()
 
-            # Push to GitHub if token is available
+            # Push main Outlast records to GitHub if token is available
             if GITHUB_TOKEN and txt_path:
                 try:
                     push_to_github(txt_path, GITHUB_FILENAME)
                     logger.info(
-                        f"Auto-pushed records to GitHub: {GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/{GITHUB_FILENAME}"
+                        f"Auto-pushed Outlast records to GitHub: {GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/{GITHUB_FILENAME}"
                     )
                 except Exception as github_error:
                     logger.error(
-                        f"Error pushing to GitHub during auto-export: {str(github_error)}"
+                        f"Error pushing Outlast records to GitHub during auto-export: {str(github_error)}"
                     )
+            
+            # Export and push Whistleblower records
+            try:
+                whistleblower_path = save_whistleblower_records_to_txt()
+                if GITHUB_TOKEN and whistleblower_path:
+                    push_to_github(whistleblower_path, WHISTLEBLOWER_FILENAME)
+                    logger.info(
+                        f"Auto-pushed Whistleblower records to GitHub: {GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/{WHISTLEBLOWER_FILENAME}"
+                    )
+            except Exception as whistleblower_error:
+                logger.error(
+                    f"Error exporting/pushing Whistleblower records: {str(whistleblower_error)}"
+                )
+            
+            # Export and push Outlast 2 records
+            try:
+                outlast2_path = save_outlast2_records_to_txt()
+                if GITHUB_TOKEN and outlast2_path:
+                    push_to_github(outlast2_path, OUTLAST2_FILENAME)
+                    logger.info(
+                        f"Auto-pushed Outlast 2 records to GitHub: {GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/{OUTLAST2_FILENAME}"
+                    )
+            except Exception as outlast2_error:
+                logger.error(
+                    f"Error exporting/pushing Outlast 2 records: {str(outlast2_error)}"
+                )
 
             # Clean up old exports (keep only the last 10)
             cleanup_old_exports()
