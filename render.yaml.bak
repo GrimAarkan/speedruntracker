@@ -2,7 +2,7 @@ services:
   - type: web
     name: outlast-speedrun-tracker
     env: python
-    buildCommand: pip install -r requirements-render.txt
+    buildCommand: pip install flask flask-sqlalchemy gunicorn psycopg2-binary requests email-validator
     startCommand: gunicorn main:app --bind 0.0.0.0:$PORT
     envVars:
       - key: PYTHON_VERSION
