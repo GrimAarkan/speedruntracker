@@ -21,10 +21,10 @@ EXPORT_DIR = os.path.join(os.path.dirname(__file__), "exports")
 os.makedirs(EXPORT_DIR, exist_ok=True)
 
 # GitHub API configuration
-GITHUB_TOKEN = ""
+GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")  # Get token from environment variable
 GITHUB_API_URL = "https://api.github.com"
-GITHUB_REPO_OWNER = "GrimAarkan"  # Change to your GitHub username
-GITHUB_REPO_NAME = "speedruntracker"  # Change to your repository name
+GITHUB_REPO_OWNER = os.environ.get("GITHUB_REPO_OWNER", "GrimAarkan")  # Get from environment or use default
+GITHUB_REPO_NAME = os.environ.get("GITHUB_REPO_NAME", "speedruntracker")  # Get from environment or use default
 
 # Initialize Flask application
 app = Flask(__name__)
