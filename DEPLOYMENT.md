@@ -69,3 +69,134 @@ If the GitHub integration is not working:
 - Verify that the `GITHUB_TOKEN` environment variable is correctly set
 - Check that the token has the necessary permissions
 - Ensure that the repository owner and name are correctly specified
+
+## Setting Up Render Cron Jobs for Automatic GitHub Exports
+
+The free tier of Render will spin down your web service after periods of inactivity, which can interrupt the background threads that handle automatic GitHub exports. To ensure that records are still regularly pushed to GitHub, you can use Render's Cron Jobs feature:
+
+1. Log in to your Render Dashboard
+2. Navigate to "Cron Jobs" section
+3. Click "New Cron Job"
+4. Set up the following:
+   - **Name**: outlast-github-export
+   - **Schedule**: `0 */6 * * *` (this runs every 6 hours)
+   - **Command**: `curl -X POST https://your-app-name.onrender.com/api/cron/export-to-github`
+   - **Region**: Choose the same region as your web service
+
+This will trigger the special endpoint we've created that exports and pushes the latest records for all three games (Outlast, Whistleblower, and Outlast 2) to GitHub, even when your application is spun down.
+
+### Render.yaml Cron Configuration
+Alternatively, you can add the cron job configuration to your render.yaml file:
+
+```yaml
+services:
+  - type: web
+    name: outlast-speedrun-tracker
+    # ... other web service configuration ...
+
+  - type: cron
+    name: github-export-records
+    env: python
+    schedule: "0 */6 * * *"
+    buildCommand: echo "No build needed for cron job"
+    startCommand: curl -X POST https://outlast-speedrun-tracker.onrender.com/api/cron/export-to-github
+    envVars:
+      - fromService:
+          type: web
+          name: outlast-speedrun-tracker
+          envVarKey: GITHUB_TOKEN
+```
+
+### Render Cron Job Troubleshooting
+If the cron job is not working:
+- Verify that your web service is properly configured and accessible
+- Check the cron job logs in the Render dashboard
+- Ensure the URL in the command points to your actual deployed application
+- Make sure the endpoint is publicly accessible (no authentication required)
+
+## Setting Up Render Cron Jobs for Automatic GitHub Exports
+
+The free tier of Render will spin down your web service after periods of inactivity, which can interrupt the background threads that handle automatic GitHub exports. To ensure that records are still regularly pushed to GitHub, you can use Render's Cron Jobs feature:
+
+1. Log in to your Render Dashboard
+2. Navigate to "Cron Jobs" section
+3. Click "New Cron Job"
+4. Set up the following:
+   - **Name**: outlast-github-export
+   - **Schedule**: `0 */6 * * *` (this runs every 6 hours)
+   - **Command**: `curl -X POST https://your-app-name.onrender.com/api/cron/export-to-github`
+   - **Region**: Choose the same region as your web service
+
+This will trigger the special endpoint we've created that exports and pushes the latest records for all three games (Outlast, Whistleblower, and Outlast 2) to GitHub, even when your application is spun down.
+
+### Render Cron Job Troubleshooting
+If the cron job is not working:
+- Verify that your web service is properly configured and accessible
+- Check the cron job logs in the Render dashboard
+- Ensure the URL in the command points to your actual deployed application
+- Make sure the endpoint is publicly accessible (no authentication required)
+
+## Setting Up Render Cron Jobs for Automatic GitHub Exports
+
+The free tier of Render will spin down your web service after periods of inactivity, which can interrupt the background threads that handle automatic GitHub exports. To ensure that records are still regularly pushed to GitHub, you can use Render's Cron Jobs feature:
+
+1. Log in to your Render Dashboard
+2. Navigate to "Cron Jobs" section
+3. Click "New Cron Job"
+4. Set up the following:
+   - **Name**: outlast-github-export
+   - **Schedule**: `0 */6 * * *` (this runs every 6 hours)
+   - **Command**: `curl -X POST https://your-app-name.onrender.com/api/cron/export-to-github`
+   - **Region**: Choose the same region as your web service
+
+This will trigger the special endpoint we've created that exports and pushes the latest records for all three games (Outlast, Whistleblower, and Outlast 2) to GitHub, even when your application is spun down.
+
+### Render Cron Job Troubleshooting
+If the cron job is not working:
+- Verify that your web service is properly configured and accessible
+- Check the cron job logs in the Render dashboard
+- Ensure the URL in the command points to your actual deployed application
+- Make sure the endpoint is publicly accessible (no authentication required)
+## Setting Up Render Cron Jobs for Automatic GitHub Exports
+
+The free tier of Render will spin down your web service after periods of inactivity, which can interrupt the background threads that handle automatic GitHub exports. To ensure that records are still regularly pushed to GitHub, you can use Render's Cron Jobs feature:
+
+1. Log in to your Render Dashboard
+2. Navigate to "Cron Jobs" section
+3. Click "New Cron Job"
+4. Set up the following:
+   - **Name**: outlast-github-export
+   - **Schedule**: `0 */6 * * *` (this runs every 6 hours)
+   - **Command**: `curl -X POST https://your-app-name.onrender.com/api/cron/export-to-github`
+   - **Region**: Choose the same region as your web service
+
+This will trigger the special endpoint we've created that exports and pushes the latest records for all three games (Outlast, Whistleblower, and Outlast 2) to GitHub, even when your application is spun down.
+
+### Render.yaml Cron Configuration
+Alternatively, you can add the cron job configuration to your render.yaml file:
+
+```yaml
+services:
+  - type: web
+    name: outlast-speedrun-tracker
+    # ... other web service configuration ...
+
+  - type: cron
+    name: github-export-records
+    env: python
+    schedule: "0 */6 * * *"
+    buildCommand: echo "No build needed for cron job"
+    startCommand: curl -X POST https://outlast-speedrun-tracker.onrender.com/api/cron/export-to-github
+    envVars:
+      - fromService:
+          type: web
+          name: outlast-speedrun-tracker
+          envVarKey: GITHUB_TOKEN
+```
+
+### Render Cron Job Troubleshooting
+If the cron job is not working:
+- Verify that your web service is properly configured and accessible
+- Check the cron job logs in the Render dashboard
+- Ensure the URL in the command points to your actual deployed application
+- Make sure the endpoint is publicly accessible (no authentication required)

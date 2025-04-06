@@ -58,7 +58,7 @@ def save_records_to_txt():
         # Write data to file
         with open(file_path, 'w') as f:
             f.write(f"As of: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} ")
-            f.write(f"from: https://www.speedrun.com/outlast | ")
+            f.write(f"from: https://www.speedrun.com/outlast ")
 
             for record in valid_categories.values():
                 f.write(f"{record['category']} ")
@@ -658,6 +658,87 @@ def export_to_github():
         return redirect(url_for('list_exports'))
 
 
+@app.route("/api/cron/export-to-github", methods=["GET", "POST"])
+def cron_export_to_github():
+    """
+    Special endpoint for Render Cron Jobs to trigger GitHub exports.
+    This can be called by Render's Cron Jobs service to ensure records
+    are regularly pushed to GitHub even when the app is spun down.
+    """
+    try:
+        results = {
+            "success": True,
+            "results": []
+        }
+        
+        # Export and push all three games
+        try:
+            # Outlast main game
+            txt_path = save_records_to_txt()
+            if txt_path and GITHUB_TOKEN:
+                success = push_to_github(txt_path, GITHUB_FILENAME)
+                results["results"].append({
+                    "game": "Outlast",
+                    "success": success
+                })
+                logger.info(f"Cron job: Pushed Outlast records to GitHub: {success}")
+        except Exception as e:
+            logger.error(f"Cron job: Error exporting Outlast to GitHub: {str(e)}")
+            results["results"].append({
+                "game": "Outlast",
+                "success": False,
+                "error": str(e)
+            })
+            
+        try:
+            # Whistleblower DLC
+            whistleblower_path = save_whistleblower_records_to_txt()
+            if whistleblower_path and GITHUB_TOKEN:
+                success = push_to_github(whistleblower_path, WHISTLEBLOWER_FILENAME)
+                results["results"].append({
+                    "game": "Whistleblower",
+                    "success": success
+                })
+                logger.info(f"Cron job: Pushed Whistleblower records to GitHub: {success}")
+        except Exception as e:
+            logger.error(f"Cron job: Error exporting Whistleblower to GitHub: {str(e)}")
+            results["results"].append({
+                "game": "Whistleblower",
+                "success": False,
+                "error": str(e)
+            })
+            
+        try:
+            # Outlast 2
+            outlast2_path = save_outlast2_records_to_txt()
+            if outlast2_path and GITHUB_TOKEN:
+                success = push_to_github(outlast2_path, OUTLAST2_FILENAME)
+                results["results"].append({
+                    "game": "Outlast 2",
+                    "success": success
+                })
+                logger.info(f"Cron job: Pushed Outlast 2 records to GitHub: {success}")
+        except Exception as e:
+            logger.error(f"Cron job: Error exporting Outlast 2 to GitHub: {str(e)}")
+            results["results"].append({
+                "game": "Outlast 2",
+                "success": False,
+                "error": str(e)
+            })
+        
+        # Clean up old exports
+        cleanup_old_exports()
+        
+        return jsonify(results)
+
+    except Exception as e:
+        logger.error(f"Cron job: Error in GitHub export endpoint: {str(e)}")
+        return jsonify({
+            "success": False,
+            "error": str(e)
+        }), 500
+
+
 # Functions for second game
 def save_whistleblower_records_to_txt():
     """Save all world records for Outlast: Whistleblower to a text file."""
@@ -680,7 +761,7 @@ def save_whistleblower_records_to_txt():
         # Write data to file
         with open(file_path, 'w') as f:
             f.write(f"As of: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} ")
-            f.write(f"from: https://www.speedrun.com/outlast | ")
+            f.write(f"from: https://www.speedrun.com/outlast ")
 
             for record in valid_categories.values():
                 f.write(f"{record['category']} ")
@@ -750,7 +831,7 @@ def save_outlast2_records_to_txt():
         # Write data to file
         with open(file_path, 'w') as f:
             f.write(f"As of: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} ")
-            f.write(f"from: https://www.speedrun.com/outlast2 | ")
+            f.write(f"from: https://www.speedrun.com/outlast2 ")
 
             for record in valid_categories.values():
                 f.write(f"{record['category']} ")

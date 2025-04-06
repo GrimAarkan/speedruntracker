@@ -15,3 +15,15 @@ services:
         value: GrimAarkan
       - key: GITHUB_REPO_NAME
         value: speedruntracker
+
+  - type: cron
+    name: github-export-records
+    env: python
+    schedule: "0 */6 * * *"
+    buildCommand: echo "No build needed for cron job"
+    startCommand: curl -X POST https://outlast-speedrun-tracker.onrender.com/api/cron/export-to-github
+    envVars:
+      - fromService:
+          type: web
+          name: outlast-speedrun-tracker
+          envVarKey: GITHUB_TOKEN
