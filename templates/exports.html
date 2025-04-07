@@ -117,39 +117,7 @@
                             </div>
                         {% endif %}
                         
-                        <!-- JSON Files -->
-                        <h4 class="mb-3 mt-4 text-light"><i class="fas fa-file-code me-2"></i>JSON Format Exports</h4>
                         
-                        {% if json_exports %}
-                            <div class="row">
-                                {% for export in json_exports %}
-                                <div class="col-md-6 mb-3">
-                                    <div class="card file-card h-100 bg-dark border-secondary">
-                                        <div class="card-body">
-                                            <h5 class="card-title text-truncate">
-                                                <i class="fas fa-file-code me-2 text-info"></i>
-                                                {{ export.filename }}
-                                            </h5>
-                                            <div class="small text-muted">
-                                                <div><i class="fas fa-calendar me-1"></i> {{ export.modified }}</div>
-                                                <div><i class="fas fa-weight me-1"></i> {{ export.size }}</div>
-                                            </div>
-                                        </div>
-                                        <div class="card-footer">
-                                            <a href="{{ export.path }}" class="btn btn-outline-light btn-sm w-100">
-                                                <i class="fas fa-download me-1"></i> Download
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                {% endfor %}
-                            </div>
-                        {% else %}
-                            <div class="alert alert-secondary">
-                                <i class="fas fa-info-circle me-2"></i>
-                                No JSON exports are available yet. Generate your first export using the button above.
-                            </div>
-                        {% endif %}
                     </div>
                 </div>
             </div>
