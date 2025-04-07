@@ -98,33 +98,7 @@ def save_records_to_txt():
         logger.error(f"Error in auto-export: {str(e)}")
         return None
 
-def save_records_to_json():
-    """Save all world records to a JSON file."""
-    try:
-        categories_data = get_all_categories()
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"outlast_world_records_{timestamp}.json"
-        file_path = os.path.join(EXPORT_DIR, filename)
 
-        valid_categories = {k: v for k, v in categories_data.items() if v is not None and v.get("raw_time", 0) > 1}
-
-        export_data = {
-            "metadata": {
-                "generated_at": datetime.now().isoformat(),
-                "source": "https://www.speedrun.com/outlast",
-                "app_version": "1.0.0"
-            },
-            "records": valid_categories
-        }
-
-        with open(file_path, 'w') as f:
-            json.dump(export_data, f, indent=2)
-
-        logger.info(f"Auto-export JSON completed: {file_path}")
-        return file_path
-    except Exception as e:
-        logger.error(f"Error in auto-export JSON: {str(e)}")
-        return None
 
 def save_whistleblower_records_to_txt():
     """Save all world records for Outlast: Whistleblower to a text file."""
@@ -233,7 +207,6 @@ def auto_export_records():
         try:
             logger.info("Auto-export cycle beginning")
             txt_path = save_records_to_txt()
-            save_records_to_json()
 
             if GITHUB_TOKEN and txt_path:
                 try:
@@ -274,16 +247,9 @@ def cleanup_old_exports():
     """Remove old export files, keeping only the most recent ones."""
     try:
         txt_files = [f for f in os.listdir(EXPORT_DIR) if f.endswith('.txt')]
-        json_files = [f for f in os.listdir(EXPORT_DIR) if f.endswith('.json')]
-
         txt_files.sort(key=lambda f: os.path.getmtime(os.path.join(EXPORT_DIR, f)), reverse=True)
-        json_files.sort(key=lambda f: os.path.getmtime(os.path.join(EXPORT_DIR, f)), reverse=True)
 
         for old_file in txt_files[10:]:
-            os.remove(os.path.join(EXPORT_DIR, old_file))
-            logger.info(f"Cleaned up old export: {old_file}")
-
-        for old_file in json_files[10:]:
             os.remove(os.path.join(EXPORT_DIR, old_file))
             logger.info(f"Cleaned up old export: {old_file}")
     except Exception as e:
@@ -365,34 +331,7 @@ def export_records():
         logger.error(f"Error exporting records: {str(e)}")
         return render_template("error.html", error="Failed to export records"), 500
 
-@app.route("/export/outlast/records/json")
-def export_records_json():
-    """Export all world records to a JSON file and provide download link."""
-    try:
-        categories_data = get_all_categories()
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"outlast_world_records_{timestamp}.json"
-        file_path = os.path.join(EXPORT_DIR, filename)
 
-        valid_categories = {k: v for k, v in categories_data.items() if v is not None and v.get("raw_time", 0) > 1}
-
-        export_data = {
-            "metadata": {
-                "generated_at": datetime.now().isoformat(),
-                "source": "https://www.speedrun.com/outlast",
-                "app_version": "1.0.0"
-            },
-            "records": valid_categories
-        }
-
-        with open(file_path, 'w') as f:
-            json.dump(export_data, f, indent=2)
-
-        return send_file(file_path, as_attachment=True)
-
-    except Exception as e:
-        logger.error(f"Error exporting records as JSON: {str(e)}")
-        return render_template("error.html", error="Failed to export records as JSON"), 500
 
 @app.route("/latest/outlast/records")
 def get_latest_records():
