@@ -174,12 +174,12 @@ def auto_export_records():
 
             # Sleep for 24 hours (86400 seconds) before next export
             # This reduces API load and prevents excessive requests
-            time.sleep(86400)
+            time.sleep(21600)
         except Exception as e:
             logger.error(f"Error in auto-export thread: {str(e)}")
             # Sleep for 6 hours (21600 seconds) and try again
             # This gives the API time to recover in case of rate limits
-            time.sleep(21600)
+            time.sleep(7200)
 
 
 # Function to clean up old export files
