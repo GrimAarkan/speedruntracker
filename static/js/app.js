@@ -15,21 +15,36 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Category descriptions
     const categoryDescriptions = {
-        'any': 'Any% is a speedrunning category where the goal is to complete the game as quickly as possible without restrictions. This means using any glitches, exploits or shortcuts that are allowed by the community rules.',
+        'any%': 'Any% is a speedrunning category where the goal is to complete the game as quickly as possible without restrictions. This means using any glitches, exploits or shortcuts that are allowed by the community rules.',
         'all_chapters': 'All Chapters requires the player to complete all main chapters of the game in sequence, without skipping any major sections.',
         'glitchless': 'Glitchless runs prohibit the use of any exploits, glitches, or unintended mechanics. The game must be completed as the developers intended.',
         'no_oob': 'No OoB (Out of Bounds) runs allow most glitches but prohibit going outside the intended playable area of the game.',
-        '100': '100% requires completing all objectives, collecting all documents and recordings, and experiencing all content in the game.',
-        'glitchless_100': 'Glitchless 100% combines the requirements of both Glitchless and 100% categories - collecting everything without using any glitches.',
+        '100%': '100% requires completing all objectives, collecting all documents and recordings, and experiencing all content in the game.',
+        'glitchless_100%': 'Glitchless 100% combines the requirements of both Glitchless and 100% categories - collecting everything without using any glitches.',
         'no_major_glitches': 'No Major Glitches allows minor exploits but prohibits significant glitches that dramatically change the intended gameplay.',
         'insane': 'Insane requires completing the game on the hardest difficulty setting (Insane mode), where death means starting over from the beginning.'
     };
     
     // Currently selected category
-    let currentCategory = 'any';
+    let currentCategory = 'any%';
     
+    // Get the current world record for a category
+    async function getCategoryRecord(category) {
+        try {
+            const response = await fetch(`/api/outlast/category/${encodeURIComponent(category)}`);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error('Error:', error);
+            return null;
+        }
+    }
+
     // Function to fetch world record data for a specific category
-    function fetchCategoryRecord(categoryKey) {
+    async function fetchCategoryRecord(categoryKey) {
         // Update current category
         currentCategory = categoryKey;
         
@@ -38,45 +53,37 @@ document.addEventListener('DOMContentLoaded', function() {
         recordDataEl.classList.add('d-none');
         errorMessageEl.classList.add('d-none');
         
-        fetch(`/api/outlast/category/${categoryKey}`)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('API request failed');
-                }
-                return response.json();
-            })
-            .then(data => {
-                // Update the UI with the data
-                categoryTitleEl.innerHTML = `<i class="fas fa-trophy me-2"></i>${data.category} World Record`;
-                recordTimeEl.textContent = data.formatted_time;
-                runnerEl.textContent = data.runner;
-                dateEl.textContent = data.date;
-                
-                // Update category info
-                categoryInfoTitleEl.textContent = `What is ${data.category}?`;
-                categoryDescriptionEl.textContent = categoryDescriptions[categoryKey] || 
-                    'This category has specific rules set by the speedrunning community.';
-                
-                // Update the last updated timestamp
-                const now = new Date();
-                lastUpdatedEl.textContent = now.toLocaleTimeString();
-                
-                // Hide loading and show the data
-                loadingEl.classList.add('d-none');
-                recordDataEl.classList.remove('d-none');
-                
-                // Add animation class
-                recordDataEl.classList.add('fade-in-up');
-                setTimeout(() => {
-                    recordDataEl.classList.remove('fade-in-up');
-                }, 500);
-            })
-            .catch(error => {
-                console.error('Error fetching category record:', error);
-                // Hide loading and show error message
-                loadingEl.classList.add('d-none');
-                errorMessageEl.classList.remove('d-none');
-            });
+        const data = await getCategoryRecord(categoryKey);
+        if (data) {
+            // Update the UI with the data
+            categoryTitleEl.innerHTML = `<i class="fas fa-trophy me-2"></i>${data.category} World Record`;
+            recordTimeEl.textContent = data.formatted_time;
+            runnerEl.textContent = data.runner;
+            dateEl.textContent = data.date;
+            
+            // Update category info
+            categoryInfoTitleEl.textContent = `What is ${data.category}?`;
+            categoryDescriptionEl.textContent = categoryDescriptions[categoryKey] || 
+                'This category has specific rules set by the speedrunning community.';
+            
+            // Update the last updated timestamp
+            const now = new Date();
+            lastUpdatedEl.textContent = now.toLocaleTimeString();
+            
+            // Hide loading and show the data
+            loadingEl.classList.add('d-none');
+            recordDataEl.classList.remove('d-none');
+            
+            // Add animation class
+            recordDataEl.classList.add('fade-in-up');
+            setTimeout(() => {
+                recordDataEl.classList.remove('fade-in-up');
+            }, 500);
+        } else {
+            // Hide loading and show error message
+            loadingEl.classList.add('d-none');
+            errorMessageEl.classList.remove('d-none');
+        }
     }
     
     // Function to fetch all categories data
@@ -183,6 +190,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Fetch data on page load
-    fetchCategoryRecord('any');
+    fetchCategoryRecord('any%');
     fetchAllCategories();
 });
