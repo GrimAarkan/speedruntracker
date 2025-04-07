@@ -21,10 +21,14 @@ EXPORT_DIR = os.path.join(os.path.dirname(__file__), "exports")
 os.makedirs(EXPORT_DIR, exist_ok=True)
 
 # GitHub API configuration
-GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")  # Get token from environment variable
+GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN",
+                              "")  # Get token from environment variable
 GITHUB_API_URL = "https://api.github.com"
-GITHUB_REPO_OWNER = os.environ.get("GITHUB_REPO_OWNER", "GrimAarkan")  # Get from environment or use default
-GITHUB_REPO_NAME = os.environ.get("GITHUB_REPO_NAME", "speedruntracker")  # Get from environment or use default
+GITHUB_REPO_OWNER = os.environ.get(
+    "GITHUB_REPO_OWNER", "GrimAarkan")  # Get from environment or use default
+GITHUB_REPO_NAME = os.environ.get(
+    "GITHUB_REPO_NAME",
+    "speedruntracker")  # Get from environment or use default
 
 # Initialize Flask application
 app = Flask(__name__)
@@ -119,8 +123,10 @@ def save_records_to_json():
 # Function to auto-export records at regular intervals
 def auto_export_records():
     """Automatically export records at regular intervals."""
+    logger.info("Auto-export thread starting - will run every 24 hours")
     while True:
         try:
+            logger.info("Auto-export cycle beginning")
             # Export main Outlast records to local files
             txt_path = save_records_to_txt()
             save_records_to_json()
@@ -136,7 +142,7 @@ def auto_export_records():
                     logger.error(
                         f"Error pushing Outlast records to GitHub during auto-export: {str(github_error)}"
                     )
-            
+
             # Export and push Whistleblower records
             try:
                 whistleblower_path = save_whistleblower_records_to_txt()
@@ -149,7 +155,7 @@ def auto_export_records():
                 logger.error(
                     f"Error exporting/pushing Whistleblower records: {str(whistleblower_error)}"
                 )
-            
+
             # Export and push Outlast 2 records
             try:
                 outlast2_path = save_outlast2_records_to_txt()
@@ -166,12 +172,14 @@ def auto_export_records():
             # Clean up old exports (keep only the last 10)
             cleanup_old_exports()
 
-            # Sleep for 6 hours (21600 seconds) before next export
-            time.sleep(21600)
+            # Sleep for 24 hours (86400 seconds) before next export
+            # This reduces API load and prevents excessive requests
+            time.sleep(86400)
         except Exception as e:
             logger.error(f"Error in auto-export thread: {str(e)}")
-            # Sleep for 1 hour and try again
-            time.sleep(3600)
+            # Sleep for 6 hours (21600 seconds) and try again
+            # This gives the API time to recover in case of rate limits
+            time.sleep(21600)
 
 
 # Function to clean up old export files
@@ -269,9 +277,12 @@ def push_to_github(file_path, github_path):
         return False
 
 
-# Start the auto-export thread when the app starts
-auto_export_thread = threading.Thread(target=auto_export_records, daemon=True)
-auto_export_thread.start()
+# Function to start the auto-export thread
+def start_auto_export_thread():
+    """Start the background thread for auto-exporting records."""
+    auto_export_thread = threading.Thread(target=auto_export_records, daemon=True)
+    auto_export_thread.start()
+    logger.info("Auto-export thread started with 24-hour interval")
 
 
 @app.route("/")
@@ -666,11 +677,8 @@ def cron_export_to_github():
     are regularly pushed to GitHub even when the app is spun down.
     """
     try:
-        results = {
-            "success": True,
-            "results": []
-        }
-        
+        results = {"success": True, "results": []}
+
         # Export and push all three games
         try:
             # Outlast main game
@@ -681,33 +689,39 @@ def cron_export_to_github():
                     "game": "Outlast",
                     "success": success
                 })
-                logger.info(f"Cron job: Pushed Outlast records to GitHub: {success}")
+                logger.info(
+                    f"Cron job: Pushed Outlast records to GitHub: {success}")
         except Exception as e:
-            logger.error(f"Cron job: Error exporting Outlast to GitHub: {str(e)}")
+            logger.error(
+                f"Cron job: Error exporting Outlast to GitHub: {str(e)}")
             results["results"].append({
                 "game": "Outlast",
                 "success": False,
                 "error": str(e)
             })
-            
+
         try:
             # Whistleblower DLC
             whistleblower_path = save_whistleblower_records_to_txt()
             if whistleblower_path and GITHUB_TOKEN:
-                success = push_to_github(whistleblower_path, WHISTLEBLOWER_FILENAME)
+                success = push_to_github(whistleblower_path,
+                                         WHISTLEBLOWER_FILENAME)
                 results["results"].append({
                     "game": "Whistleblower",
                     "success": success
                 })
-                logger.info(f"Cron job: Pushed Whistleblower records to GitHub: {success}")
+                logger.info(
+                    f"Cron job: Pushed Whistleblower records to GitHub: {success}"
+                )
         except Exception as e:
-            logger.error(f"Cron job: Error exporting Whistleblower to GitHub: {str(e)}")
+            logger.error(
+                f"Cron job: Error exporting Whistleblower to GitHub: {str(e)}")
             results["results"].append({
                 "game": "Whistleblower",
                 "success": False,
                 "error": str(e)
             })
-            
+
         try:
             # Outlast 2
             outlast2_path = save_outlast2_records_to_txt()
@@ -717,26 +731,25 @@ def cron_export_to_github():
                     "game": "Outlast 2",
                     "success": success
                 })
-                logger.info(f"Cron job: Pushed Outlast 2 records to GitHub: {success}")
+                logger.info(
+                    f"Cron job: Pushed Outlast 2 records to GitHub: {success}")
         except Exception as e:
-            logger.error(f"Cron job: Error exporting Outlast 2 to GitHub: {str(e)}")
+            logger.error(
+                f"Cron job: Error exporting Outlast 2 to GitHub: {str(e)}")
             results["results"].append({
                 "game": "Outlast 2",
                 "success": False,
                 "error": str(e)
             })
-        
+
         # Clean up old exports
         cleanup_old_exports()
-        
+
         return jsonify(results)
 
     except Exception as e:
         logger.error(f"Cron job: Error in GitHub export endpoint: {str(e)}")
-        return jsonify({
-            "success": False,
-            "error": str(e)
-        }), 500
+        return jsonify({"success": False, "error": str(e)}), 500
 
 
 # Functions for second game
