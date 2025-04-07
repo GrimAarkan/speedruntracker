@@ -261,10 +261,9 @@ def list_exports():
     """Display a list of all available exports."""
     try:
         txt_files = [f for f in os.listdir(EXPORT_DIR) if f.endswith('.txt')]
-        json_files = [f for f in os.listdir(EXPORT_DIR) if f.endswith('.json')]
 
         txt_files.sort(key=lambda f: os.path.getmtime(os.path.join(EXPORT_DIR, f)), reverse=True)
-        json_files.sort(key=lambda f: os.path.getmtime(os.path.join(EXPORT_DIR, f)), reverse=True)
+
 
         txt_exports = []
         for filename in txt_files:
@@ -278,21 +277,9 @@ def list_exports():
                 'size': f"{size_kb:.1f} KB"
             })
 
-        json_exports = []
-        for filename in json_files:
-            file_path = os.path.join(EXPORT_DIR, filename)
-            mod_time = datetime.fromtimestamp(os.path.getmtime(file_path))
-            size_kb = os.path.getsize(file_path) / 1024
-            json_exports.append({
-                'filename': filename,
-                'path': f"/exports/download/{filename}",
-                'modified': mod_time.strftime('%Y-%m-%d %H:%M:%S'),
-                'size': f"{size_kb:.1f} KB"
-            })
 
         return render_template("exports.html",
                            txt_exports=txt_exports,
-                           json_exports=json_exports,
                            repo_owner=GITHUB_REPO_OWNER,
                            repo_name=GITHUB_REPO_NAME)
     except Exception as e:
@@ -364,17 +351,18 @@ def trigger_export():
     """Trigger an immediate export of the records."""
     try:
         txt_path = save_records_to_txt()
-        json_path = save_records_to_json()
+        whistleblower_path = save_whistleblower_records_to_txt()
+        outlast2_path = save_outlast2_records_to_txt()
 
-        if txt_path and json_path:
-            return render_template("export_success.html",
-                               txt_file=os.path.basename(txt_path),
-                               json_file=os.path.basename(json_path))
+        if txt_path and whistleblower_path and outlast2_path:
+            return redirect(url_for('list_exports'))
         else:
-            return render_template("error.html", error="Failed to generate exports"), 500
+            flash("Failed to generate some exports", "danger")
+            return redirect(url_for('list_exports'))
     except Exception as e:
         logger.error(f"Error triggering export: {str(e)}")
-        return render_template("error.html", error="Failed to trigger export"), 500
+        flash("Error occurred while exporting", "danger")
+        return redirect(url_for('list_exports'))
 
 @app.route("/export/to-github")
 def export_to_github():
